@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Tax Calculator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
@@ -19,79 +21,123 @@ s.parentNode.insertBefore(hm, s);
 </head>
 <body>
 
+    <!--    ****PAGE 1****-->
+    
 <div data-role="page" id="pageone">
     
     <div data-role="panel" id="myPanel"> 
-    <h2>Panel Header</h2>
-            <a href="#pagetwo">Page Two</a><br>
-    <a href="#pagethree">Page Three</a>
+    <h2>Where would you like to go?</h2>
+        <a href="#pageone">Home</a><br><br>
+        <a href="#pagetwo">Gallery</a><br><br>
+        <a href="#pagethree">Camera</a><br><br>
+        <a href="#pagefour">Graphs</a>
     <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
     <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
   </div> 
     
-  <div data-role="header">
-    <h1>Week 5</h1>
+  <div data-role="header" id="header">
+      <a href="#myPanel" id="menubtn" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Menu</a> <span id="headtext">Tax Calculator</span>
 
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Click on the button below to open the Panel.</p>
-    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
-  </div>
 
-  <div data-role="footer" data-position="fixed">
-    <h1>Footer Text</h1>
+      <p> Welcome to the Tax Calculator!</p>
   </div>
 </div> 
 
+    
+    
+    
+    
+    
+    <!--    ****PAGE 2****-->
+    
 <div data-role="page" id="pagetwo">
     
     <div data-role="panel" id="myPanel"> 
-    <h2>Panel Header</h2>
-            <a href="#pageone">Page One</a><br>
-    <a href="#pagethree">Page Three</a>
+    <h2>Where would you like to go?</h2>
+        <a href="#pageone">Home</a><br><br>
+        <a href="#pagetwo">Gallery</a><br><br>
+        <a href="#pagethree">Camera</a><br><br>
+        <a href="#pagefour">Graphs</a>
     <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
     <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
   </div> 
     
-  <div data-role="header">
-    <h1>Week 5</h1>
+  <div data-role="header" id="header">
+      <a href="#myPanel" id="menubtn" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Menu</a> <span id="headtext">Gallery</span>
 
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Click on the button below to open the Panel.</p>
-    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+
+      
+      <p>Nothing to show yet. :(</p>
   </div>
 
-  <div data-role="footer" data-position="fixed">
-    <h1>Footer Text</h1>
-  </div>
 </div> 
 
+    
+    
+    
+    
+    
+    <!--    ****PAGE 3****-->
+    
     <div data-role="page" id="pagethree">
         
     <div data-role="panel" id="myPanel"> 
-    <h2>Panel Header</h2>
-            <a href="#pageone">Page One</a><br>
-    <a href="#pagetwo">Page Two</a>
+    <h2>Where would you like to go?</h2>
+        <a href="#pageone">Home</a><br><br>
+        <a href="#pagetwo">Gallery</a><br><br>
+        <a href="#pagethree">Camera</a><br><br>
+        <a href="#pagefour">Graphs</a>
     <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
     <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
   </div> 
         
-  <div data-role="header">
-    <h1>Week 5</h1>
+  <div data-role="header" id="header">
+          <a href="#myPanel" id="menubtn" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Menu</a> <span id="headtext">Camera</span>
 
   </div>
 
   <div data-role="main" class="ui-content">
-    <p>Click on the button below to open the Panel.</p>
-    <a href="#myPanel" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Open Panel</a>
+
+
   </div>
 
-  <div data-role="footer" data-position="fixed">
-    <h1>Footer Text</h1>
-  </div>
 </div> 
+    
+    
+    
+    
+    
+    
+<!--    ****PAGE 4****-->
+    
+    <div data-role="page" id="pagefour">
+    
+    <div data-role="panel" id="myPanel"> 
+    <h2>Where would you like to go?</h2>
+        <a href="#pageone">Home</a><br><br>
+        <a href="#pagetwo">Gallery</a><br><br>
+        <a href="#pagethree">Camera</a><br><br>
+        <a href="#pagefour">Graphs</a>
+    <p>You can close the panel by clicking outside the panel, pressing the Esc key, by swiping, or by clicking the button below:</p>
+    <a href="#pageone" data-rel="close" class="ui-btn ui-btn-inline ui-shadow ui-corner-all ui-btn-a ui-icon-delete ui-btn-icon-left">Close panel</a>
+  </div> 
+    
+  <div data-role="header" id="header">
+         <a href="#myPanel" id="menubtn" class="ui-btn ui-btn-inline ui-corner-all ui-shadow">Menu</a> <span id="headtext">Graphs</span>
+
+  </div>
+
+  <div data-role="main" class="ui-content">
+
+  </div>
+
+</div> 
+    
 </body>
 </html>

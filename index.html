@@ -43,15 +43,16 @@ s.parentNode.insertBefore(hm, s);
   <div data-role="main" class="ui-content">
 
       <p> Welcome to the Tax Calculator!</p>
-      <form>
+      <form><div id="formsections">
       <p1>Please Enter your Salary (£):</p1><br>
-      <input id="salary" placeholder="£00000">
+      <input id="salary" placeholder='Do NOT use any currency symbols ("£", "$", etc.)'>
       
       <select id="timescale">
           <option value="yearly">Yearly</option>
           <option value="quarterly">Quarterly</option>
           <option value="monthly">Monthly</option>
           <option value="weekly">Weekly</option>
+          <option value="hourly">Hourly</option>
       </select><br>
           <p1>Tax Year:</p1>
                 <select id="year-range">
@@ -63,11 +64,18 @@ s.parentNode.insertBefore(hm, s);
           <option value="2012-2013">2012-2013</option>
           <option value="2011-2012">2011-2012</option>
           <option value="2010-2011">2010-2011</option>
-      </select><br><br>
-          
+      </select>
+          </div><br><br>
+      <div id="formsections">
         <p1>Hours Worked: </p1><input id="HoursWorked" placeholder="0"><br>
         <p1>Days Worked per week: </p1><input id="HoursWorked" placeholder="0">
-      
+          </div><br><br>
+      <div id="formsections">
+      <p1>Overtime Worked (Hours) per month:</p1><input id="OvertimeHours" placeholder="0"><br>
+      <p1>Overtime Hourly Wage:</p1><input id="OvertimeWage" placeholder="0">
+          
+       </div>
+          <br><br><button>Submit</button>
       </form>
   </div>
 </div> 

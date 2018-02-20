@@ -24,6 +24,12 @@ a{
     text-decoration: none;
 }
 
+#formsections{
+    padding: 20px;
+    border-top: 3px lightblue solid;
+    border-left: 3px lightblue solid;
+}
+
 input{
     padding: 1px;
     font-size: 18px;

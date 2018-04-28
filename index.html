@@ -37,7 +37,15 @@
   </div>
 
   <div data-role="main" class="ui-content">
-
+<script>
+     window.onload = function(){
+      if (jQuery) {
+        alert("jquery is loaded");
+       } else {
+        alert("Not loaded");
+        }
+     }
+  </script>
       <p> Welcome to the Tax Calculator!</p>
       <form><div id="formsections">
       <p1>Please Enter your Salary (£):</p1><br>

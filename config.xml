@@ -20,7 +20,10 @@
 
    	<plugin name="cordova-plugin-whitelist" version="1" />
 	<plugin name="cordova-plugin-camera" spec="2.4.1" />
-
+    <plugin name="cordova-plugin-file" version="4"/>
+        
+    <preference name="AndroidPersistentFileLocation" value="Internal" />
+    <preference name="iosPersistentFileLocation" value="Library" />
 
 
 </widget>

@@ -47,55 +47,41 @@ function onDeviceReady() {
 //get access to file and CREATE if does not exists
 function gotFS(fileSystem) {
     
- 	fileSystem.getFile("test.txt", {create: true, exclusive: false}, gotFileEntry, fail);
+ 	fileSystem.getFile("Images", {create: true, exclusive: false}, gotFileEntry, fail);
 }
 
 //get file entry
 function gotFileEntry(fileEntry) {
 	console.log("got file entry");
 	this.fileEntry = fileEntry
-	fileEntry.file(gotFile, fail);
+	fileEntry.file(gotDirEntry, fail);
+}
+
+function gotDirEntry(DirEntry){
+    
+            dirEntry.getFile("new image", {
+            create: true,
+            exclusive: false
+        }, gotFile, fail);
 }
 
 //get file itself
 function gotFile(file){
     console.log("got file");
-	readAsText(file);
+    fileEntry.createWriter(gotFileWriter, fail);
 }
 
-//READ text from file - assumes that the file contains 
-function readAsText(file) {
-    console.log("readAsText");
-	
-	var reader = new FileReader();
-	
-	//assigns a callback function to be run once the file has been completely read
-	reader.onloadend = function(evt) {
-	
-		//store the new string in 'filetext'
-		filetext = evt.target.result;
-		
-		//update the binding 
-		fileBinding.set({ fileimage: fileimage });
-    };
-	
-	//begin reading the file
-   	reader.readAsText(file);
-}
+    function gotFileWriter(writer) {
+        writer.onwrite = function (evt) {
+           // alert("write completed");
+        };
+        writer.write(stored_Content);
+        writer.abort();
+    }
 
-
-//UDPATE file contents - called when submit button is pressed
-function writeFile()
-{
-    console.log("writeFile: "  + fileEntry.fullPath);
-    
-	fileEntry.createWriter(
-		function (writer) { 
-			writer.write(filetext);
-		}, 
-		fail
-	);
-}
+    function fail(error) {
+        alert(error.code);
+    }
 
 //DELETE file
 //function deleteFile()

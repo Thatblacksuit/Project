@@ -18,7 +18,7 @@ function onPageCreated() {
 	
 	//setup buttons
 	$('#camerasave').on("click", writeFile);
-	$('#deleteFile').on("click", deleteFile);
+//	$('#deleteFile').on("click", deleteFile);
 	
 	// setup RactiveJS binding
 
@@ -76,7 +76,7 @@ function readAsText(file) {
 		filetext = evt.target.result;
 		
 		//update the binding 
-		fileBinding.set({ filetext: filetext });
+		fileBinding.set({ fileimage: fileimage });
     };
 	
 	//begin reading the file
@@ -98,22 +98,22 @@ function writeFile()
 }
 
 //DELETE file
-function deleteFile()
-{
-    
-    console.log("deleteFile");
-	
-	fileEntry.remove(
-		function () {
-			alert("File deleted");
-            onDeviceReady();
-		}, 
-		fail
-	);
-	
-	//reload file system
-  	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
-}
+//function deleteFile()
+//{
+//    
+//    console.log("deleteFile");
+//	
+//	fileEntry.remove(
+//		function () {
+//			alert("File deleted");
+//            onDeviceReady();
+//		}, 
+//		fail
+//	);
+//	
+//	//reload file system
+//  	window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+//}
 
 function fail(error) {
 	alert("Cannot use file: " + error.message);

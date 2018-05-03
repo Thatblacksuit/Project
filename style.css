@@ -25,7 +25,7 @@ a{
     text-decoration: none;
 }
 
-#formsections{
+.formsections{
     padding: 20px;
     border-top: 3px lightblue solid;
     border-left: 3px lightblue solid;
@@ -39,4 +39,12 @@ input{
 #timescale{
     padding: 1px;
     font-size: 18px
+}
+
+#section2{
+    display: none;
+}
+
+#overtimeform{
+    display: none;
 }

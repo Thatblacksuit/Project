@@ -1,5 +1,5 @@
 //global variables
-var filetext  = "";
+var fileimage  = "";
 var fileBinding;
 var fileEntry;
 
@@ -17,7 +17,7 @@ function onPageCreated() {
      console.log("page created");
 	
 	//setup buttons
-	$('#writeFile').on("click", writeFile);
+	$('#camerasave').on("click", writeFile);
 	$('#deleteFile').on("click", deleteFile);
 	
 	// setup RactiveJS binding
@@ -26,12 +26,12 @@ function onPageCreated() {
 	fileBinding = new Ractive({
 		el: 'container',
 		template: '#template',
-		data: { filetext: filetext}
+		data: { fileimage: fileimage}
 	});
 
 
 	//detects changes in the text box and updates the 'filetext' value with the new value
-	fileBinding.observe( 'filetext', function ( newValue, oldValue ) {
+	fileBinding.observe( 'fileimage', function ( newValue, oldValue ) {
   		filetext = newValue; 
 	});
     

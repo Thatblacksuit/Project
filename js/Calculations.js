@@ -1,3 +1,29 @@
+window.onload = function(){
+    var rate = document.getElementById('timescale').value;
+    var section2 = document.getElementById('section2');
+    var section3 = document.getElementById('overtimeform');
+    var OThours = document.getElementById('OvertimeHours');
+    var OTwage = document.getElementById('OvertimeWage');
+
+if(rate == "8760"){
+    section2.style.display = "block";
+} else {
+    section2.style.display = "none";
+};
+    
+        var section3 = document.getElementById('overtimeform');
+    var OThours = document.getElementById('OvertimeHours');
+    var OTwage = document.getElementById('OvertimeWage');
+    
+    if(document.getElementById("overtime").checked == true){
+       section3.style.display = "block";
+   } else {
+       section3.style.display = "none";
+        OThours.value = "";
+        OTwage.value = "";
+   }
+}
+
 function disablesection2() {
 var rate = document.getElementById('timescale').value;
 var section2 = document.getElementById('section2');
@@ -8,6 +34,7 @@ if(rate == "8760"){
     section2.style.display = "none";
 };
 };
+
 
 function disableovertime() {
     var section3 = document.getElementById('overtimeform');
@@ -33,8 +60,14 @@ var OTwage = document.getElementById('OvertimeWage').value;
 var years = document.getElementById('year-range').value;
     
 var taxtotal = 0;
-var regtotal = (salary * rate);
+var regtotal = 0;
 var OTtotal = OTwage * OThours;
+    
+if (rate == 8760){
+    regtotal = ((salary * totalhours) * totaldays) * 52;
+} else {
+    regtotal = (salary * rate);
+}   
 
 if (years == 8){
    if (regtotal <= 35000) {
@@ -117,6 +150,7 @@ if (regtotal <= 34500) {
     
     
 var grandtotal = regtotal + OTtotal;   
-    window.alert("Your salary yearly salary is " + regtotal +"\n\nYour salary this month including overtime is :" + grandtotal +"\n\nYour total salary after tax: " + taxtotal)
+    window.alert("Your salary yearly salary before tax is " + regtotal +"\n\nYour salary this year including overtime is :" + grandtotal +"\n\nYour total salary after tax: " + taxtotal);
+    window.location.reload();
 };
 
